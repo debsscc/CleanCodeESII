@@ -13,9 +13,11 @@ function ContemElemento(array, elemento) {
   };
   let lista = [1, 2, 3, 4, 5];
   let elemento = 3;
+
+  module.exports = ContemElemento;
   
   // Variável que verifica se o elemento está contido no array
-  const verifica = contemElemento(lista, elemento);
+  const verifica = ContemElemento(lista, elemento);
   if (verifica == true) {
     console.log(`${elemento} foi encontrado no array`);
   } else {
@@ -41,7 +43,7 @@ function ContemElemento(array, elemento) {
 
   for (let i = 0; i < numeros.length; i++) {
     if (numeros[i] % 2 === 0) {
-      console.log(m[i]);
+      console.log(numeros[i]);
     }
   } 
 
