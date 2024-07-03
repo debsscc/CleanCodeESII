@@ -1,3 +1,5 @@
+// Refatoração de código: Pedro Bilhalva
+
 var a = function (b, c) {
   for (var i = 0; i < b.length; i++) {
     if (b[i] === c) {
