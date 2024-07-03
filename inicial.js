@@ -1,50 +1,63 @@
 // Refatoração de código: Pedro Bilhalva
+// Melhora na legibilidade do código: Diego Nachtigall
 
-var a = function (b, c) {
-  for (var i = 0; i < b.length; i++) {
-    if (b[i] === c) {
-      return true;
+function ContemElemento(array, elemento) {
+    for (var i = 0; i < array.length; i++) {
+      if (array[i] === elemento) {
+        return true;
+      }
+    }
+    return false;
+  };
+  
+  let lista = [1, 2, 3, 4, 5];
+  let elemento = 3;
+  
+  const verifica = contemElemento(lista, elemento);
+  if (verifica == true) {
+    console.log(`${elemento} foi encontrado no array`);
+  } else {
+    console.log(`${elemento} não foi encontrado no array`);	
+  }
+  
+  
+  for (let i = 0; i <= 5; i++) {
+    console.log(i);
+  }
+  
+  
+  let cinco = 5;
+  let dez = 10;
+  function Soma(numero1, numero2) {
+    return numero1 + numero2;
+  }
+  
+  console.log(Soma(cinco, dez));
+  
+  
+  var numeros = [1, 2, 3, 4, 5];
+  
+  for (let i = 0; i < numeros.length; i++) {
+    if (numeros[i] % 2 === 0) {
+      console.log(m[i]);
     }
   }
-  return false;
-};
-let d = [1, 2, 3, 4, 5];
-let e = 3;
-const f = a(d, e);
-if (f == true) {
-  console.log("Found!");
-} else {
-  console.log("Not found!");
-}
-for (var i = 0; i < 10; i++) {
-  console.log(i);
-  if (i == 5) {
-    break;
+  function Subtracao(PrimeiroN, SegundoN) {
+    if ( PrimeiroN > SegundoN) {
+      return PrimeiroN - SegundoN;
+    } else {
+      return SegundoN - PrimeiroN;
+    }
   }
-}
-let g = 5;
-let h = 10;
-function j(k, l) {
-  return k + l;
-}
-console.log(j(g, h));
-var m = [1, 2, 3, 4, 5];
-for (let i = 0; i < m.length; i++) {
-  if (m[i] % 2 === 0) {
-    console.log(m[i]);
-  }
-}
-function n(o, p) {
-  if (o > p) {
-    return o - p;
-  } else {
-    return p - o;
-  }
-}
-var q = 100;
-var r = 50;
-console.log(n(q, r));
-let s = function (t) {
-  return t * t;
-};
-console.log(s(5));
+  
+  var cem = 100;
+  var cinquenta = 50;
+  console.log(Subtracao(cem, cinquenta));
+  
+  
+  function Quadrado(numero) {
+    return numero * numero;
+  };
+  
+  console.log(Quadrado(5));
+  
