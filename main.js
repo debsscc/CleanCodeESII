@@ -1,20 +1,12 @@
 // Refatoração de código: Pedro Bilhalva
-// Melhora na legibilidade do código: Diego Nachtigall
+// Melhora na legibilidade do código e separação de funções: Diego Nachtigall
 // Comentarios e documentação: Débora Carvalho
 
-// Função que verifica se um elemento está contido no array "lista" e imprime uma mensagem de acordo com o resultado
-function ContemElemento(array, elemento) {
-    for (var i = 0; i < array.length; i++) {
-      if (array[i] === elemento) {
-        return true;
-      }
-    }
-    return false;
-  };
+// Função que verifica se um elemento está contido na array "lista" e imprime uma mensagem de acordo com o resultado
+const ContemElemento = require('./functions/ContemElemento.js');
+
   let lista = [1, 2, 3, 4, 5];
   let elemento = 3;
-
-  module.exports = ContemElemento;
   
   // Variável que verifica se o elemento está contido no array
   const verifica = ContemElemento(lista, elemento);
@@ -25,45 +17,36 @@ function ContemElemento(array, elemento) {
   }
   
   // Função que imprime os números de 0 a 5
-  for (let i = 0; i <= 5; i++) {
-    console.log(i);
-  }
+  const ContagemProgressiva = require('./functions/ContagemProgressiva.js');
+
+  console.log(ContagemProgressiva(0, 5));
   
   // Função que soma dois números com variáveis "cinco" e "dez", e imprime o resultado a partir da função "Soma"
+  const Soma = require('./functions/Soma.js');
+
   let cinco = 5;
   let dez = 10;
-  function Soma(numero1, numero2) {
-    return numero1 + numero2;
-  }
+
 
   console.log(Soma(cinco, dez));
   
     // Função que imprime os números pares da array "numeros", que contém os números de 1 a 5
-  var numeros = [1, 2, 3, 4, 5];
+    const SelecionaPares = require('./functions/SelecionaPares.js');
+    
+    var numeros = [1, 2, 3, 4, 5];
 
-  for (let i = 0; i < numeros.length; i++) {
-    if (numeros[i] % 2 === 0) {
-      console.log(numeros[i]);
-    }
-  } 
+    console.log(SelecionaPares(numeros));
 
     // Função que subtrai dois números com variáveis de exemplo, e imprime o resultado a partir da função "Subtracao"
-  function Subtracao(PrimeiroN, SegundoN) {
-    if ( PrimeiroN > SegundoN) {
-      return PrimeiroN - SegundoN;
-    } else {
-      return SegundoN - PrimeiroN;
-    }
-  }
+  const Subtracao = require('./functions/Subtracao.js');
+
   var cem = 100;
   var cinquenta = 50;
 
   console.log(Subtracao(cem, cinquenta));
   
   // Função que multiplica um número por ele mesmo, e imprime o resultado a partir da função "Quadrado"
-  function Quadrado(numero) {
-    return numero * numero;
-  };
-
+  const Quadrado = require('./functions/Quadrado.js');
+  
   console.log(Quadrado(5));
   
